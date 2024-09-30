@@ -1,0 +1,24 @@
+def sum_nums(a: int, b: int):
+    return a + b
+
+
+def sum_all_nums(*args):
+    total_sum = 1
+    for el in args:
+        total_sum *= int(el)
+    return total_sum
+
+
+def f1(*args, **kwargs):
+    for key, value in kwargs.items():
+        print(f'{key}-->{value}')
+
+
+test = f1(a=5, b=10, c="guzi")
+print(test)
+
+elements = [int(x) for x in range(1, 8)]
+
+# print(*elements)
+print(sum_all_nums(*elements))
+print(sum_nums(5, 6))
